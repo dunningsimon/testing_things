@@ -1,0 +1,20 @@
+Some PXE stuff and Rancher OS https://reachablegames.com/using-ipxe-to-remote-boot-rancheros-onto-bare-metal/
+
+Setting up a secure HTTPS server for iPXE booting https://druid.fish/ipxe_for_valve_infra.html
+
+
+SWUpdate https://github.com/sbabic/swupdate
+
+Comparison of software update technologies https://elinux.org/images/3/31/Comparison_of_Linux_Software_Update_Technologies.pdf
+
+IPXE Anywhere introduction https://docs.2pintsoftware.com/ipxe-anywhere/2pxe-server/ipxe-anywhere-introduction
+
+
+IPXE crypto https://ipxe.org/crypto
+
+
+
+Thinking about how we could bootstrap a new OS onto a new controller or an old Jessie or Buster one. I think we could use a PXE boot process to completely reinstall an OS onto the mSATA and re partition the disks as required. 
+
+PCEngines BIOS already has IPXE configured as a boot target, we would probably have to build a custom IPXE image and rebuild the PCEngines BIOS firmware to include it but they we could configure that custom IPXE image to download the main OS image from a Vocovo webserver via HTTPS authenticated somehow. 
+
